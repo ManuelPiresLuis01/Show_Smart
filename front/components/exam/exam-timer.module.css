@@ -1,0 +1,55 @@
+.timer {
+  min-width: 200px;
+  text-align: right;
+}
+
+.timerLabel {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.timerBar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.timerProgress {
+  height: 100%;
+  background: white;
+  transition: width 1s linear;
+  border-radius: 3px;
+}
+
+.timer.warning .timerProgress {
+  background: var(--warning-color);
+}
+
+.timer.critical .timerProgress {
+  background: var(--error-color);
+}
+
+.timer.critical .timerLabel {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 768px) {
+  .timer {
+    min-width: auto;
+    width: 100%;
+    text-align: center;
+  }
+}

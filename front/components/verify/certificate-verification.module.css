@@ -1,0 +1,243 @@
+.verificationContainer {
+  /* Changed from hardcoded white to CSS custom property */
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  /* Added transition for smooth theme switching */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.form {
+  margin-bottom: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  /* Changed from hardcoded white to CSS custom property */
+  background: var(--surface);
+  color: var(--text-primary);
+  font-family: monospace;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  /* Updated focus shadow to use new primary color */
+  box-shadow: 0 0 0 3px rgb(249 115 22 / 0.1);
+}
+
+.verifyButton {
+  width: 100%;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.verifyButton:hover:not(.disabled) {
+  background: var(--primary-hover);
+}
+
+.verifyButton.disabled {
+  background: var(--secondary-color);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.result {
+  margin-bottom: 2rem;
+}
+
+.resultCard {
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 2px solid;
+  /* Added transition for smooth theme switching */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.resultCard.valid {
+  background: rgba(5, 150, 105, 0.05);
+  border-color: var(--success-color);
+}
+
+.resultCard.invalid {
+  background: rgba(220, 38, 38, 0.05);
+  border-color: var(--error-color);
+}
+
+.resultHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.resultIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.resultCard.valid .resultIcon {
+  background: var(--success-color);
+  color: white;
+}
+
+.resultCard.invalid .resultIcon {
+  background: var(--error-color);
+  color: white;
+}
+
+.resultTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.resultCard.valid .resultTitle {
+  color: var(--success-color);
+}
+
+.resultCard.invalid .resultTitle {
+  color: var(--error-color);
+}
+
+.certificateInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  /* Changed from hardcoded white to CSS custom property */
+  background: var(--background);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  /* Added transition for smooth theme switching */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.infoLabel {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.infoValue {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.errorMessage {
+  text-align: center;
+  color: var(--error-color);
+}
+
+.errorMessage p {
+  margin-bottom: 0.5rem;
+}
+
+.info {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 2rem;
+  border: 1px solid var(--border);
+  /* Added transition for smooth theme switching */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.infoTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoList li {
+  padding: 0.5rem 0;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.infoList li::before {
+  content: "•";
+  color: var(--primary-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .verificationContainer {
+    padding: 2rem;
+    margin: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .infoRow {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
