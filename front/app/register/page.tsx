@@ -20,14 +20,14 @@ export default function RegisterPage() {
         >
           <div className={styles.header}>
             <h1 className={styles.title}>{t("auth.register")}</h1>
-            <p className={styles.subtitle}>Create your account to start taking exams</p>
+            <p className={styles.subtitle}>{t("auth.registerExplain")}</p>
           </div>
 
           <RegisterForm />
 
           <div className={styles.footer}>
             <p>
-              Already have an account?{" "}
+              {t("auth.haveAccount")}{" "}
               <Link href="/login" className={styles.link}>
                 {t("auth.login")}
               </Link>

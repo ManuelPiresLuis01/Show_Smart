@@ -1,20 +1,18 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { useTranslation } from "react-i18next"
-import { LanguageSwitcher } from "@/components/ui/language-switcher"
-import { ThemeSwitcher } from "@/components/ui/theme-switcher"
-import styles from "./navigation.module.css"
-
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "@/components/ui/language-switcher";
+// import { ThemeSwitcher } from "@/components/ui/theme-switcher";
+import styles from "./navigation.module.css";
+import Logo from "../ui/logo";
 export function Navigation() {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <nav className={styles.nav}>
       <div className={`container ${styles.navContainer}`}>
-        <Link href="/" className={styles.logo}>
-          Smart Cert
-        </Link>
+        <Logo />
 
         <div className={styles.navLinks}>
           <Link href="/" className={styles.navLink}>
@@ -32,7 +30,7 @@ export function Navigation() {
         </div>
 
         <div className={styles.navActions}>
-          <ThemeSwitcher />
+          {/* <ThemeSwitcher /> */}
           <LanguageSwitcher />
           <Link href="/login" className="btn btn-secondary">
             {t("nav.login")}
@@ -43,5 +41,5 @@ export function Navigation() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
