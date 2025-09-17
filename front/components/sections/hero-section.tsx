@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { useTranslation } from "react-i18next"
-import { motion } from "framer-motion"
-import Link from "next/link"
-import styles from "./hero-section.module.css"
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import styles from "./hero-section.module.css";
 
 export function HeroSection() {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <section className={styles.hero}>
@@ -42,7 +42,7 @@ export function HeroSection() {
               </div>
               <div className={styles.certificateBody}>
                 <p>This certifies that</p>
-                <h4>John Doe</h4>
+                <h4>John Doe </h4>
                 <p>has successfully completed</p>
                 <h4>Web Development Fundamentals</h4>
                 <div className={styles.certificateFooter}>
@@ -57,5 +57,5 @@ export function HeroSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

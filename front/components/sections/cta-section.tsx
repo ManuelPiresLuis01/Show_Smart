@@ -18,16 +18,16 @@ export function CTASection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className={styles.title}>Ready to Get Certified?</h2>
+          <h2 className={styles.title}>{t("hero.title")} </h2>
           <p className={styles.subtitle}>
-            Join thousands of professionals who have advanced their careers with our certifications.
+             {t("hero.subtitle")}
           </p>
           <div className={styles.actions}>
             <Link href="/register" className="btn btn-primary">
               {t("hero.cta")}
             </Link>
             <Link href="/exams" className="btn btn-secondary">
-              Browse Exams
+              {t("hero.browse")}
             </Link>
           </div>
         </motion.div>

@@ -20,7 +20,7 @@ export default function ResetPasswordPage() {
         >
           <div className={styles.header}>
             <h1 className={styles.title}>{t("auth.resetPassword")}</h1>
-            <p className={styles.subtitle}>Enter your email address and we'll send you a reset link</p>
+            <p className={styles.subtitle}>{t("auth.explainReset")}</p>
           </div>
 
           <ResetPasswordForm />

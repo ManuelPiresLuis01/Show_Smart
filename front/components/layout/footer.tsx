@@ -3,21 +3,23 @@
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
 import styles from "./footer.module.css"
+import Logo from "../ui/logo"
 
 export function Footer() {
   const { t } = useTranslation()
+  const date = new Date();
 
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.footerContainer}`}>
         <div className={styles.footerContent}>
           <div className={styles.footerSection}>
-            <h3>CertifyPro</h3>
-            <p>Professional certification platform for career advancement</p>
+            <Logo/>
+            <p>{t("footer.explain")}</p>
           </div>
 
           <div className={styles.footerSection}>
-            <h4>Platform</h4>
+            <h4>{t("footer.title")}</h4>
             <div className={styles.footerLinks}>
               <Link href="/about">{t("footer.about")}</Link>
               <Link href="/privacy">{t("footer.privacy")}</Link>
@@ -28,7 +30,7 @@ export function Footer() {
         </div>
 
         <div className={styles.footerBottom}>
-          <p>&copy; 2024 CertifyPro. All rights reserved.</p>
+          <p>&copy; {date.getFullYear()} <b>ShowSmart</b>. <br/>{t("footer.copyright")}.</p>
         </div>
       </div>
     </footer>

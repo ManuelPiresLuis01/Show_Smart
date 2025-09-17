@@ -18,6 +18,7 @@ const resources = {
       "hero.subtitle":
         "Take professional exams, get graded instantly, and download verified certificates with QR codes",
       "hero.cta": "Take an Exam",
+      "hero.browse":"Browse Exams",
       "steps.title": "How It Works",
       "steps.register": "Register",
       "steps.register.desc": "Create your account and choose your preferred language",
@@ -34,6 +35,9 @@ const resources = {
       "benefits.recognized.desc": "Our certifications are accepted by leading companies",
 
       // Authentication
+      "auth.checkEmail":"Check your email",
+      "auth.ssendCode":"We've sent a link to",
+      "auth.registerExplain":"Create your account to start taking exams",
       "auth.fullName": "Full Name",
       "auth.email": "Email",
       "auth.password": "Password",
@@ -49,6 +53,10 @@ const resources = {
       "auth.forgotPassword": "Forgot Password?",
       "auth.resetPassword": "Reset Password",
       "auth.backToLogin": "Back to Login",
+      "auth.greetings":"Welcome back! Please sign in to your account",
+      "auth.dontAccount":"Don't have an account?",
+      "auth.haveAccount":"Already have an account?",
+      "auth.explainReset":"Enter your email address and we'll send you a recover code!",
 
       // Dashboard
       "dashboard.welcome": "Welcome back, {{name}}!",
@@ -97,12 +105,16 @@ const resources = {
       "admin.deleteExam": "Delete Exam",
 
       // Footer
+      "footer.explain":"Professional certification platform for career advancement",
+      "footer.title":"Platform",
       "footer.about": "About",
       "footer.privacy": "Privacy Policy",
-      "footer.terms": "Terms of Service",
+      "footer.terms": "Terms and Conditions",
       "footer.contact": "Contact",
+      "footer.copyright":"All rights reserved",
 
       // Common
+      "common.sendCode":"Send Code",
       "common.loading": "Loading...",
       "common.error": "An error occurred",
       "common.success": "Success!",
@@ -130,6 +142,7 @@ const resources = {
       "hero.subtitle":
         "Faça exames profissionais, seja avaliado instantaneamente e descarregue certificados verificados com códigos QR",
       "hero.cta": "Fazer Exame",
+      "hero.browse":"Procurar exames",
       "steps.title": "Como Funciona",
       "steps.register": "Registar",
       "steps.register.desc": "Crie a sua conta e escolha o seu idioma preferido",
@@ -146,6 +159,9 @@ const resources = {
       "benefits.recognized.desc": "As nossas certificações são aceites por empresas líderes",
 
       // Authentication
+      "auth.checkEmail":"Verifique o seu email",
+      "auth.ssendCode":"Enviamos um link para",
+      "auth.registerExplain":"Cria a sua conta para começar a ter os exames",
       "auth.fullName": "Nome Completo",
       "auth.email": "Email",
       "auth.password": "Palavra-passe",
@@ -161,6 +177,10 @@ const resources = {
       "auth.forgotPassword": "Esqueceu a palavra-passe?",
       "auth.resetPassword": "Redefinir Palavra-passe",
       "auth.backToLogin": "Voltar ao Login",
+      "auth.greetings":"Bem vindo de volta! Por favor entre com a sua conta",
+      "auth.dontAccount":"Não tem uma conta?",
+      "auth.haveAccount":"Ja tem uma conta?",
+      "auth.explainReset":"Digite o seu email e vamos enviar-te um codigo de recuperação!",
 
       // Dashboard
       "dashboard.welcome": "Bem-vindo de volta, {{name}}!",
@@ -209,12 +229,16 @@ const resources = {
       "admin.deleteExam": "Eliminar Exame",
 
       // Footer
+      "footer.explain":"Plataforma de certificação profissional para avanço na carreira",
+      "footer.title":"Plataforma",
       "footer.about": "Sobre",
       "footer.privacy": "Política de Privacidade",
-      "footer.terms": "Termos de Serviço",
+      "footer.terms": "Termos e condições",
       "footer.contact": "Contacto",
+      "footer.copyright":"Todos os direitos reservados",
 
       // Common
+      "common.sendCode":"Enviar Codigo",
       "common.loading": "A carregar...",
       "common.error": "Ocorreu um erro",
       "common.success": "Sucesso!",

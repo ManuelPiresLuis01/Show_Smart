@@ -20,14 +20,14 @@ export default function LoginPage() {
         >
           <div className={styles.header}>
             <h1 className={styles.title}>{t("auth.login")}</h1>
-            <p className={styles.subtitle}>Welcome back! Please sign in to your account</p>
+            <p className={styles.subtitle}>{t("auth.greetings")}</p>
           </div>
 
           <LoginForm />
 
           <div className={styles.footer}>
             <p>
-              Don't have an account?{" "}
+                {t("auth.dontAccount")}{" "}
               <Link href="/register" className={styles.link}>
                 {t("auth.register")}
               </Link>

@@ -29,9 +29,9 @@ export function ResetPasswordForm() {
     return (
       <div className={styles.success}>
         <div className={styles.successIcon}>✓</div>
-        <h3 className={styles.successTitle}>Check your email</h3>
+        <h3 className={styles.successTitle}> {t("auth.checkEmail")}</h3>
         <p className={styles.successMessage}>
-          We've sent a password reset link to <strong>{email}</strong>
+         {t("auth.ssendCode")} <strong>{email}</strong>
         </p>
       </div>
     )
@@ -61,7 +61,7 @@ export function ResetPasswordForm() {
         whileHover={email ? { scale: 1.02 } : {}}
         whileTap={email ? { scale: 0.98 } : {}}
       >
-        {isSubmitting ? t("common.loading") : "Send Reset Link"}
+        {isSubmitting ? t("common.loading") : t("common.sendCode")}
       </motion.button>
     </form>
   )
