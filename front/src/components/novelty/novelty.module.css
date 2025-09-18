@@ -1,0 +1,29 @@
+.novelty {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 50px;
+  margin-bottom: 100px;
+}
+
+.banner img {
+  width: 800px;
+  object-fit: cover;
+}
+
+.content{
+    padding: 0 20px;   
+}
+
+.content h1{
+    font-size: 20px;
+    color: #ffffffe4;
+}
+
+.content p{
+    margin: 20px 0;
+    width: 600px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #ffffffb3;
+}

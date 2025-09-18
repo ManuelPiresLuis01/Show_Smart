@@ -1,0 +1,22 @@
+*{
+    font-family: 'Bangers', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d32f2f;
+  border-radius: 10px;
+}

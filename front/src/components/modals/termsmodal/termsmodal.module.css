@@ -1,0 +1,57 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background-color: #000;
+  color: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.text {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  height: 300px;
+  overflow: hidden;
+  overflow-y: scroll;
+  line-height: 1.5;
+}
+
+.text::-webkit-scrollbar {
+  width: 8px;
+}
+
+.text::-webkit-scrollbar-thumb {
+  background-color: #d32f2f;
+  border-radius: 4px;
+}
+
+.buttons {
+  width: 70px;
+  display: flex;
+  gap: 10px;
+}
+
+.button1 {
+  color: white;
+  background-color: #d32f2f;
+}
+
+.button1:hover {
+  background-color: #b71c1c;
+}

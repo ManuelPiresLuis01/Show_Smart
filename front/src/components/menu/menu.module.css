@@ -1,0 +1,66 @@
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav li{
+    list-style-type: none;
+}
+
+
+.navLinks a {
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    display: block;
+}
+
+.navLinks a:hover {
+transform: scale(1.1);
+
+}
+
+.authLinks{
+    display: flex;
+    gap: 20px;
+}
+
+.authLinks a{
+    display: block;
+    border-radius: 20px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;	
+    height: 30px;
+}
+
+.login{
+    background-color: white;
+    color: #ed1d24 ;
+}
+
+.login:hover {
+  background-color: #e3e3e3;
+}
+
+.registration{
+    background-color:#ed1d24 ;
+    color: white ;
+}
+
+.registration:hover {
+  background-color: #ff0000a5;
+}
