@@ -1,21 +1,17 @@
 import api from "../api.ts";
-import {
-  registrationRoute,
-  activationRoute,
-} from "../routes/authroutes/auth.route.ts";
-import type { user } from "../types/user.types.ts";
+import { created } from "../routes/frontRoutes/front.routes.ts";
+import {registrationRoute,activationRoute,} from "../routes/apiRoutes/auth.route.ts";
+import type { user } from "../types/auth.types.ts";
 
 class Order {
   Registry = async (user: user) => {
-    console.log(user);
     try {
       const response = await api.post(registrationRoute, user);
       this.sendActivationEmail(user.email);
-      window.location.href = "/auth/created"
-      console.log(response)
-      return response
+      window.location.href = created;
+      return response;
     } catch (error: any) {
-        console.log(error)
+      console.error(error);
       return error.data;
     }
   };

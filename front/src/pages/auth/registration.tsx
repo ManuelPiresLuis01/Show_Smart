@@ -6,7 +6,7 @@ import { LuCircleCheck } from "react-icons/lu";
 import Style from "./style/index.module.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import type { user } from "../../service/types/user.types";
+import type { user } from "../../service/types/auth.types";
 import newOrder from "../../service/authservice/registry";
 
 const Registration = () => {
