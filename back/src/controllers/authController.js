@@ -10,7 +10,6 @@ class AuthController {
   createUser = async (req, res) => {
     const { name, email, password, idiom, gender, dateOfBirth, terms } =
       req.body;
-
     if (
       !name ||
       !email ||
@@ -22,14 +21,16 @@ class AuthController {
     ) {
       return res.status(400).json({ message: "Missing required fields" });
     }
-
     try {
       const existingUser = await User.findOne({ email });
       if (existingUser) {
         return res.status(400).json({ message: "Email already in use" });
       }
 
-      const hashedPassword = await bcrypt.hash(password, process.env.SALT_ROUNDS);
+      const hashedPassword = await bcrypt.hash(
+        password,
+        Number(process.env.SALT_ROUNDS)
+      );
 
       const user = await User.create({
         name,
@@ -46,6 +47,7 @@ class AuthController {
         .json({ message: "Was sent a message to activate ur account", user });
     } catch (error) {
       res.status(500).json({ message: error.message });
+      console.log(error.message);
     }
   };
 
@@ -78,7 +80,7 @@ class AuthController {
       const token = jwt.sign(
         { id: user._id, email: user.email },
         process.env.JWT_SECRET,
-        { expiresIn: process.env.TOKEN_EXPIRES_IN  }
+        { expiresIn: process.env.TOKEN_EXPIRES_IN }
       );
 
       res.status(200).json({
@@ -106,7 +108,7 @@ class AuthController {
       const activationToken = jwt.sign(
         { id: user._id },
         process.env.JWT_SECRET,
-        { expiresIn: TOKEN_EXPIRES_IN  }
+        { expiresIn: process.env.TOKEN_EXPIRES_IN }
       );
 
       const backendUrl = `${req.protocol}://${req.get("host")}`;
@@ -145,7 +147,7 @@ class AuthController {
         return res.status(404).send("user not found");
       }
 
-      return res.redirect(`${process.env.FRONTEND_URL}/login`);
+      return res.redirect(`${process.env.FRONTEND_URL}auth/login`);
     } catch (error) {
       return res.status(400).send("invalid or expired token");
     }

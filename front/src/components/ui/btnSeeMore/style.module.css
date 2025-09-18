@@ -1,0 +1,12 @@
+.seeMore {
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #ed1d24;
+  color: white;
+  cursor: pointer;
+}
+
+.seeMore:hover {
+  background-color: #ff0000a5;
+}
