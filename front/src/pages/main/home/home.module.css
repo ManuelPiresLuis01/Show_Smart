@@ -1,13 +1,18 @@
 .home1 {
   display: flex;
   flex-direction: column;
-  background-color: black;
   width: 100%;
   color: white;
 }
 
 .topContent {
-  height: 100dvh;
+  background: url(../../../../public/certification.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: color;
+  background-color: #000000d2;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,13 +42,12 @@
   gap: 5px;
   margin: 0 auto;
   cursor: pointer;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .start:hover {
   background-color: #e3e3e3;
 }
-
 
 .search {
   margin: auto;
@@ -75,7 +79,6 @@
   padding-left: 20px;
   border: none;
 }
-
 
 .certification {
   display: flex;

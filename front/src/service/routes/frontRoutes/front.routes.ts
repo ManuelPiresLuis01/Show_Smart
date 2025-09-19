@@ -1,2 +1,2 @@
-export  const created = "/auth/route"
-export  const home = ""
+export  const created = "/auth/route";
+export  const home = "";
