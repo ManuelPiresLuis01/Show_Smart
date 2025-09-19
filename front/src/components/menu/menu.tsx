@@ -1,10 +1,22 @@
+import { useEffect, useState } from "react";
 import Logo from "../ui/logo/Logo";
 import Style from "./menu.module.css";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className={Style.nav}>
+    <nav className={`${Style.nav} ${scrolled ? Style.scrolled : ""}`}>
       <Logo />
       <ul className={Style.navLinks}>
         <li>

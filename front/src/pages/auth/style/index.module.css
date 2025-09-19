@@ -1,13 +1,26 @@
 .container {
-    background: url(../../../../public/4844928.jpg);
-    height: 100dvh;
     background-position: center;
     background-size: cover;
     background-blend-mode: color;
     background-color: #000000b4;
     display: flex;
-    justify-content: center;
     color: white;
+}
+
+.containerBackground{
+    width: 50%;
+    height: 100vh;
+    background: url(../../../../public/certification.jpg);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: color;
+    background-color: #000000c4;
+}
+
+.containerForm{
+    width: 50%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 

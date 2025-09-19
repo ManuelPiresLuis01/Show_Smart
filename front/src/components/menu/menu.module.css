@@ -1,64 +1,71 @@
-
-.nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-    padding-top: 30px;
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  background-color: black;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
 }
 
-.nav ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+.scrolled {
+  background-color: #0000007c;
 }
 
-.nav li{
-    list-style-type: none;
+.nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
+.nav li {
+  list-style-type: none;
+}
 
 .navLinks a {
-    color: white;
-    font-weight: 500;
-    transition: all 0.3s ease-in-out;
-    display: block;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  display: block;
 }
 
 .navLinks a:hover {
-transform: scale(1.1);
-
+  transform: scale(1.1);
 }
 
-.authLinks{
-    display: flex;
-    gap: 20px;
+.authLinks {
+  display: flex;
+  gap: 20px;
 }
 
-.authLinks a{
-    display: block;
-    border-radius: 20px;
-    width: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;	
-    height: 30px;
+.authLinks a {
+  display: block;
+  border-radius: 20px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 30px;
 }
 
-.login{
-    background-color: white;
-    color: #ed1d24 ;
+.login {
+  background-color: white;
+  color: #ed1d24;
 }
 
 .login:hover {
   background-color: #e3e3e3;
 }
 
-.registration{
-    background-color:#ed1d24 ;
-    color: white ;
+.registration {
+  background-color: #ed1d24;
+  color: white;
 }
 
 .registration:hover {
